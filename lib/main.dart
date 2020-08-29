@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_designs/src/pages/basic_page.dart';
 import 'package:flutter_designs/src/pages/buttons_page.dart';
+import 'package:flutter_designs/src/pages/home_page.dart';
 import 'package:flutter_designs/src/pages/scroll_page.dart';
  
 void main() => runApp(MyApp());
@@ -18,11 +19,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter designs',
       debugShowCheckedModeBanner: false,
-      initialRoute: 'buttons',
+      initialRoute: 'home',
       routes: {
         'basic'   : ( BuildContext context ) => BasicPage(),
         'scroll'  : ( BuildContext context ) => ScrollPage(),
-        'buttons' : ( BuildContext context ) => ButtonsPage()
+        'buttons' : ( BuildContext context ) => ButtonsPage(),
+        'home'    : ( BuildContext context ) => HomePage()
       },
     );
   }
