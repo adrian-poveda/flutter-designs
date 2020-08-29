@@ -10,7 +10,14 @@ class BasicPage extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
-          children: [_createImage(), _createMainTitle(), _createActions(), _createDescription(), _createDescription(), _createDescription()],
+          children: [
+            _createImage(),
+            _createMainTitle(),
+            _createActions(),
+            _createDescription(),
+            _createDescription(),
+            _createDescription()
+          ],
         ),
       ),
     );
@@ -48,29 +55,27 @@ class BasicPage extends StatelessWidget {
   }
 
   Widget _createActions() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
+    return Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
       _createSingleAction(Icons.call, 'CALL'),
       _createSingleAction(Icons.near_me, 'ROUTE'),
       _createSingleAction(Icons.share, 'Share'),
-    ]
-    );
+    ]);
   }
 
   Widget _createSingleAction(IconData icon, String text) {
-
     return Column(
-        children: [
-          Icon(icon, color: Colors.blue, size:40),
-          SizedBox(height: 5),
-          Text('$text', style: TextStyle(fontSize: 15, color: Colors.blue),)
-        ],
-      );
+      children: [
+        Icon(icon, color: Colors.blue, size: 40),
+        SizedBox(height: 5),
+        Text(
+          '$text',
+          style: TextStyle(fontSize: 15, color: Colors.blue),
+        )
+      ],
+    );
   }
 
   Widget _createDescription() {
-
     return SafeArea(
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 40),
